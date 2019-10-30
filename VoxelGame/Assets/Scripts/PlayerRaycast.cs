@@ -31,7 +31,7 @@ public class PlayerRaycast : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out rayCastHit, 10, layerMask))
             {
-                if(rayCastHit.distance < 2.5) return;
+                if(Vector3.Distance(rayCastHit.point, transform.parent.position) < .5f || (Mathf.Abs(transform.parent.position.y - rayCastHit.point.y) < 2f && Mathf.Max(Mathf.Abs(rayCastHit.point.x - transform.parent.position.x), Mathf.Abs(rayCastHit.point.z - transform.parent.position.z)) <  .75f)) return;
                 rayCastHit.collider.GetComponent<ChunkGenerator>().AddBlock(rayCastHit, transform.TransformDirection(Vector3.forward), false, CurrentBlock);
             }
         }
@@ -39,9 +39,9 @@ public class PlayerRaycast : MonoBehaviour
         if (Mathf.Abs(currentValue) > 0.01f)
         {
             if (currentValue > 0)
-                ShiftCurrentBlock(1);
-            else
                 ShiftCurrentBlock(-1);
+            else
+                ShiftCurrentBlock(1);
         }
     }
 
@@ -51,8 +51,6 @@ public class PlayerRaycast : MonoBehaviour
         if (CurrentBlock > 3) CurrentBlock = 0;
         if (CurrentBlock < 0) CurrentBlock = 3;
         CurrentBlockIndicator.position = startingPosition + CurrentBlock * shiftIndicatorAmount;
-
-
     }
 
 }
