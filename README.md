@@ -2,6 +2,12 @@ Space and Blocks
 Eli Asimow
 10/29/2019
 
+HOW TO RUN:
+
+Download the Space And Blocks Folder and run SpaceAndBlocks.exe
+
+INFORMATION:
+
 This project was made over the course of a week in October, 2019.
 It took roughly 15 hours of work. 
 Although I was familiar with the engine, a good portion of my time was dedicated to understanding new concepts such as
@@ -32,6 +38,8 @@ Outside of this, all logic was structured and programmed by myself. No code was 
 Chunk Generator,
 Terrain Generator,
 Player Raycast
+
+To read these scripts, please look in UnityFiles -> Assets -> Scripts
 
 Feel free to look inside them to check my work!
 If you have any questions, please contact me at eliasimow@gmail.com
