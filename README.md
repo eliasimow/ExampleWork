@@ -29,8 +29,8 @@ UI Canvas system
 
 Outside of this, all logic was structured and programmed by myself. No code was based on or copied from any other source, Scripts I wrote include, but are not limited to:
 
-Chunk Generator
-Terrain Generator
+Chunk Generator,
+Terrain Generator,
 Player Raycast
 
 Feel free to look inside them to check my work!
